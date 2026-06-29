@@ -1,0 +1,176 @@
+.orderList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.orderCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-neutral-bg);
+  padding: var(--spacing-4) var(--spacing-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.headerInfo {
+  display: flex;
+  gap: var(--spacing-12);
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.orderAction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.detailsLink {
+  font-size: 0.9rem;
+  color: var(--color-brand-blue);
+  font-weight: 500;
+}
+
+.detailsLink:hover {
+  text-decoration: underline;
+}
+
+.orderBody {
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.status {
+  margin-bottom: var(--spacing-2);
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.production {
+  background-color: rgba(31, 77, 143, 0.1);
+  color: var(--color-brand-blue);
+}
+
+.delivered {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.itemImageWrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+  flex-shrink: 0;
+}
+
+.imgEl {
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.moreItems {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+}
+
+.trackBtn, .buyAgainBtn {
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.trackBtn {
+  background-color: var(--color-brand-blue);
+  color: white;
+}
+
+.trackBtn:hover {
+  background-color: var(--color-secondary);
+}
+
+.buyAgainBtn {
+  background-color: white;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.buyAgainBtn:hover {
+  background-color: var(--color-neutral-bg);
+}
+
+@media (max-width: 768px) {
+  .headerInfo {
+    gap: var(--spacing-6);
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .orderHeader {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .orderAction {
+    align-items: flex-start;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .trackBtn, .buyAgainBtn {
+    text-align: center;
+  }
+}

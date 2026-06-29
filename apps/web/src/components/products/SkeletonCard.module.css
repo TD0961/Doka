@@ -1,0 +1,61 @@
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(108, 71, 255, 0.05) 25%,
+    rgba(108, 71, 255, 0.14) 50%,
+    rgba(108, 71, 255, 0.05) 75%
+  );
+  background-size: 1200px 100%;
+  animation: shimmer 1.8s infinite ease-in-out;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.image {
+  aspect-ratio: 4/5;
+  width: 100%;
+  composes: shimmer;
+}
+
+.info {
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.line {
+  border-radius: var(--radius-sm);
+  composes: shimmer;
+}
+
+.nameLine  { height: 17px; width: 75%; }
+.priceLine { height: 15px; width: 35%; }
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ratingLine { height: 13px; width: 45%; }
+
+.colorDots { display: flex; gap: 4px; }
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  composes: shimmer;
+}

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* ── Playful Doka Palette ── */
+  --color-primary:     #d2b7b7ff;          /* near-black for headings */
+  --color-secondary:   #8787b1ff;          /* deep navy for depth */
+
+  /* Vibrant brand accents */
+  --color-brand:       #6C47FF;          /* electric violet – primary CTA */
+  --color-coral:       #FF5757;          /* energetic coral / hot-red */
+  --color-yellow:      #FFD233;          /* sunny yellow – badges, highlights */
+  --color-mint:        #00C9A7;          /* fresh mint-teal */
+  --color-sky:         #38BDF8;          /* sky blue */
+  --color-rose:        #FF7EB3;          /* playful pink */
+
+  /* Backgrounds */
+  --color-bg:          #F5F3FF;          /* soft lavender tint – warm and bright */
+  --color-bg-alt:      #FFF7ED;          /* warm cream for alternating sections */
+  --color-surface:     #FFFFFF;
+  --color-surface-tint:#F0ECFF;          /* very light violet for card hover */
+
+  /* Borders & utility */
+  --color-border:      rgba(217, 213, 237, 0.12);
+  --color-border-soft: rgba(179, 160, 160, 0.06);
+  --color-text-primary:  #0D0D0D;
+  --color-text-secondary: #6B7280;
+  --color-text-muted:    #A0AEC0;
+
+  /* Legacy aliases kept for compatibility */
+  --color-neutral-bg:  var(--color-bg);
+  --color-brand-blue:  var(--color-brand);
+  --color-accent-blue: var(--color-sky);
+  --color-highlight:   #EDE9FF;
+
+  /* Spacing scale */
+  --spacing-1:  0.25rem;
+  --spacing-2:  0.5rem;
+  --spacing-3:  0.75rem;
+  --spacing-4:  1rem;
+  --spacing-5:  1.25rem;
+  --spacing-6:  1.5rem;
+  --spacing-8:  2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  /* Radius */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-2xl:  28px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(108,71,255,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:  0 4px 16px rgba(108,71,255,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg:  0 12px 32px rgba(108,71,255,0.12), 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-xl:  0 24px 48px rgba(108,71,255,0.14), 0 8px 20px rgba(0,0,0,0.06);
+  --shadow-glow:0 0 24px rgba(108,71,255,0.35);
+  --shadow-card:0 2px 8px rgba(0,0,0,0.06), 0 0 0 1px rgba(108,71,255,0.07);
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Motion */
+  --transition-fast:   150ms cubic-bezier(0.4,0,0.2,1);
+  --transition-normal: 250ms cubic-bezier(0.4,0,0.2,1);
+  --transition-slow:   380ms cubic-bezier(0.4,0,0.2,1);
+  --transition-bounce: 400ms cubic-bezier(0.34,1.56,0.64,1);
+}
+
+/* ── Dark mode ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:          #0F0B1E;
+    --color-bg-alt:      #120E25;
+    --color-surface:     #1A1530;
+    --color-surface-tint:#231C42;
+    --color-border:      rgba(108,71,255,0.2);
+    --color-border-soft: rgba(255,255,255,0.06);
+    --color-text-primary:  #F0ECFF;
+    --color-text-secondary: #9CA3AF;
+    --color-text-muted:    #6B7280;
+    --color-neutral-bg:  var(--color-bg);
+  }
+}
+
+/* ── Base reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { width: 100%; height: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+button { background: none; border: none; cursor: pointer; font-family: inherit; }
+input, textarea, select { font-family: inherit; }
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
